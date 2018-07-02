@@ -1,39 +1,41 @@
+$lightblue: #00b8d4;
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
 .mainTitle{
     text-align: center;
-    color: #00b8d4;
+    color: $lightblue;
+    margin-bottom: 2%;
+    margin-top: 2%;
 }
 
 #app{
     border-radius: 10px;
     .inputForm{
         padding: 1%;
-
-        input:focus{
-            web-kit-box-shadow: #00b8d4;
-        }
     }
-    
 }
-
 
 .tabs{
     .tab{
         width: 50%;
         a{
-            color: #00b8d4;
+            color: $lightblue;
         }
         a.active{
-            color: #00b8d4
+            color: $lightblue
         }
         a:hover{
-            color: #00b8d4;
+            color: $lightblue;
         }
         a:focus.active{
             background-color: rgba(162, 245, 245, 0.31)
         }
     }
     .indicator{
-        background-color: #00b8d4;
+        background-color: $lightblue;
     }
 }
 
@@ -45,20 +47,25 @@
         position: relative;
         margin: 0;
         height: 4em;
+
+        span{
+            margin-left: 5px;
+        }
+
         .doneButton {
             zoom: 0.7;
             margin: 5px;
-            border: 1px solid #00b8d4;
+            border: 1px solid $lightblue;
             i{
-                color: #00b8d4;
+                color: $lightblue;
             }
         }
         .undoButton {
             zoom: 0.7;
             margin: 5px;
-            border: 1px solid #00b8d4;
+            border: 1px solid $lightblue;
             i{
-                color: #00b8d4;
+                color: $lightblue;
             }
         }
         .favButton{
@@ -69,6 +76,15 @@
                 color: #fbc02d;
             }
         }
+
+        .favButton.itemIsFav{
+            background-color: #fbc02d;
+            i{
+                color: white;
+                background-color: #fbc02d;
+            }
+        }
+
         .deleteButton{
             position: absolute;
             right: 0;
@@ -76,6 +92,9 @@
             i{
             color: #e53935;
             }
+        }
+        .deleteButton:focus{
+            background-color: white;
         }
         
     }
@@ -86,4 +105,15 @@
         color: lightgrey;
         text-decoration: line-through;
     }
+}
+
+.list-item-enter-active, .list-item-leave-active {
+    transition: opacity 0.3s, transform 0.3s;
+    transform-origin: left center;
+}
+
+
+.list-item-enter, .list-item-leave-to {
+    opacity: 0;
+    transform: scale(0.5);
 }

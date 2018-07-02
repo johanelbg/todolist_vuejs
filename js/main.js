@@ -9,11 +9,11 @@ var app = new Vue({
 
     methods: {
         addToList(){
-            var id = this.elemList.length + 1
-            if(this.newtoList !== 0){ //prevent empty string to be added
+            var id = this.elemList.length + 1 // increment a key inside the ocject
+            if(this.newtoList.length !== 0){ // prevent to add empty string
                 var toPush = {key: id, elem: this.newtoList, isFav: 0}
                 this.elemList.push(toPush)
-                this.newtoList = ''
+                this.newtoList = '' // empty the input
             }
         },
 
@@ -31,14 +31,18 @@ var app = new Vue({
             this.deleteElem(key)
         },
 
-        moveToDo(index, key){
+        moveToDo(index, key){ 
             var toPush = this.doneList[index] 
             this.elemList.push(toPush)
             this.deleteDone(key)
          },
 
-         favorite(index){
-            this.$set(this.favList[index], 'isFav', 1) // turn an element to fav
+         favorite(index){  // turn an element to fav (it will also change add a class)
+            if(this.favList[index].isFav == 0){
+                this.$set(this.favList[index], 'isFav', 1)
+            } else{
+                this.$set(this.favList[index], 'isFav', 0)
+            }
          }
     },
 
@@ -47,11 +51,10 @@ var app = new Vue({
             return _.orderBy(this.elemList, 'isFav', 'desc') // order my list by favorite using lodash
           }
     }
-
 })
    
 
 
 $(document).ready(function(){
-    $('.tabs').tabs(); // initilize the tabs of materialize
+    $('.tabs').tabs(); // initialize the tabs of materialize
   });
