@@ -1,0 +1,89 @@
+.mainTitle{
+    text-align: center;
+    color: #00b8d4;
+}
+
+#app{
+    border-radius: 10px;
+    .inputForm{
+        padding: 1%;
+
+        input:focus{
+            web-kit-box-shadow: #00b8d4;
+        }
+    }
+    
+}
+
+
+.tabs{
+    .tab{
+        width: 50%;
+        a{
+            color: #00b8d4;
+        }
+        a.active{
+            color: #00b8d4
+        }
+        a:hover{
+            color: #00b8d4;
+        }
+        a:focus.active{
+            background-color: rgba(162, 245, 245, 0.31)
+        }
+    }
+    .indicator{
+        background-color: #00b8d4;
+    }
+}
+
+.todoList, .doneList{
+    p{
+        height: 3em;
+        //border-radius: 10px;
+        border-bottom: 1px solid lightgrey;
+        position: relative;
+        margin: 0;
+        height: 4em;
+        .doneButton {
+            zoom: 0.7;
+            margin: 5px;
+            border: 1px solid #00b8d4;
+            i{
+                color: #00b8d4;
+            }
+        }
+        .undoButton {
+            zoom: 0.7;
+            margin: 5px;
+            border: 1px solid #00b8d4;
+            i{
+                color: #00b8d4;
+            }
+        }
+        .favButton{
+            zoom: 0.7;
+            margin: 5px;
+            border: 1px solid #fbc02d;
+            i{
+                color: #fbc02d;
+            }
+        }
+        .deleteButton{
+            position: absolute;
+            right: 0;
+            border: none;
+            i{
+            color: #e53935;
+            }
+        }
+        
+    }
+}
+
+.doneList{
+    p{
+        color: lightgrey;
+        text-decoration: line-through;
+    }
+}

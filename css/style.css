@@ -1,0 +1,60 @@
+.mainTitle {
+  text-align: center;
+  color: #00b8d4; }
+
+#app {
+  border-radius: 10px; }
+  #app .inputForm {
+    padding: 1%; }
+    #app .inputForm input:focus {
+      web-kit-box-shadow: #00b8d4; }
+
+.tabs .tab {
+  width: 50%; }
+  .tabs .tab a {
+    color: #00b8d4; }
+  .tabs .tab a.active {
+    color: #00b8d4; }
+  .tabs .tab a:hover {
+    color: #00b8d4; }
+  .tabs .tab a:focus.active {
+    background-color: rgba(162, 245, 245, 0.31); }
+.tabs .indicator {
+  background-color: #00b8d4; }
+
+.todoList p, .doneList p {
+  height: 3em;
+  border-bottom: 1px solid lightgrey;
+  position: relative;
+  margin: 0;
+  height: 4em; }
+  .todoList p .doneButton, .doneList p .doneButton {
+    zoom: 0.7;
+    margin: 5px;
+    border: 1px solid #00b8d4; }
+    .todoList p .doneButton i, .doneList p .doneButton i {
+      color: #00b8d4; }
+  .todoList p .undoButton, .doneList p .undoButton {
+    zoom: 0.7;
+    margin: 5px;
+    border: 1px solid #00b8d4; }
+    .todoList p .undoButton i, .doneList p .undoButton i {
+      color: #00b8d4; }
+  .todoList p .favButton, .doneList p .favButton {
+    zoom: 0.7;
+    margin: 5px;
+    border: 1px solid #fbc02d; }
+    .todoList p .favButton i, .doneList p .favButton i {
+      color: #fbc02d; }
+  .todoList p .deleteButton, .doneList p .deleteButton {
+    position: absolute;
+    right: 0;
+    border: none; }
+    .todoList p .deleteButton i, .doneList p .deleteButton i {
+      color: #e53935; }
+
+.doneList p {
+  color: lightgrey;
+  text-decoration: line-through; }
+
+/*# sourceMappingURL=style.css.map */
