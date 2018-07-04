@@ -1,4 +1,5 @@
 $lightblue: #00b8d4;
+$lightyellow: #fbc02d;
 
 body{
     font-family: 'Open Sans', sans-serif;
@@ -13,6 +14,7 @@ body{
 
 #app{
     border-radius: 10px;
+
     .inputForm{
         padding: 1%;
     }
@@ -21,19 +23,24 @@ body{
 .tabs{
     .tab{
         width: 50%;
+
         a{
             color: $lightblue;
         }
+
         a.active{
-            color: $lightblue
+            color: $lightblue;
         }
+
         a:hover{
             color: $lightblue;
         }
+
         a:focus.active{
             background-color: rgba(162, 245, 245, 0.31)
         }
     }
+
     .indicator{
         background-color: $lightblue;
     }
@@ -41,21 +48,25 @@ body{
 
 .todoList, .doneList{
     p{
-        height: 3em;
-        //border-radius: 10px;
         border-bottom: 1px solid lightgrey;
         position: relative;
         margin: 0;
         height: 4em;
 
         span{
+            position: absolute;
+            left: 30px;
+            right: 65px;
             margin-left: 5px;
         }
 
         .doneButton {
+            position: absolute;
+            top: 17px;
             zoom: 0.7;
             margin: 5px;
             border: 1px solid $lightblue;
+
             i{
                 color: $lightblue;
             }
@@ -64,24 +75,30 @@ body{
             zoom: 0.7;
             margin: 5px;
             border: 1px solid $lightblue;
+
             i{
                 color: $lightblue;
             }
         }
         .favButton{
+            position: absolute;
+            right: 45px;
+            top: 14px;
             zoom: 0.7;
             margin: 5px;
-            border: 1px solid #fbc02d;
+            border: 1px solid $lightyellow;
+
             i{
-                color: #fbc02d;
+                color: $lightyellow;
             }
         }
 
         .favButton.itemIsFav{
-            background-color: #fbc02d;
+            background-color: $lightyellow;
+
             i{
                 color: white;
-                background-color: #fbc02d;
+                background-color: $lightyellow;
             }
         }
 
@@ -89,10 +106,12 @@ body{
             position: absolute;
             right: 0;
             border: none;
+
             i{
             color: #e53935;
             }
         }
+
         .deleteButton:focus{
             background-color: white;
         }
@@ -101,7 +120,7 @@ body{
 }
 
 .doneList{
-    p{
+    span{
         color: lightgrey;
         text-decoration: line-through;
     }

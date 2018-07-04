@@ -32,8 +32,13 @@ body {
   margin: 0;
   height: 4em; }
   .todoList p span, .doneList p span {
+    position: absolute;
+    left: 30px;
+    right: 65px;
     margin-left: 5px; }
   .todoList p .doneButton, .doneList p .doneButton {
+    position: absolute;
+    top: 17px;
     zoom: 0.7;
     margin: 5px;
     border: 1px solid #00b8d4; }
@@ -46,6 +51,9 @@ body {
     .todoList p .undoButton i, .doneList p .undoButton i {
       color: #00b8d4; }
   .todoList p .favButton, .doneList p .favButton {
+    position: absolute;
+    right: 45px;
+    top: 14px;
     zoom: 0.7;
     margin: 5px;
     border: 1px solid #fbc02d; }
@@ -65,7 +73,7 @@ body {
   .todoList p .deleteButton:focus, .doneList p .deleteButton:focus {
     background-color: white; }
 
-.doneList p {
+.doneList span {
   color: lightgrey;
   text-decoration: line-through; }
 
